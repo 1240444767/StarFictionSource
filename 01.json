@@ -90,7 +90,9 @@
       "chapterName": ".",
       "chapterUrl": "./@href",
       "chapterListNextPage": "",
-      "jsExtract": ""
+      "jsExtract": "(function(){var b=document.querySelector('.catalog-all');if(b)b.click();var c=document.querySelector('#a-list
+  .u-chapter');if(!c||c.children.length===0){c=document.querySelector('.cfirst');}var r=[];if(c){c.querySelectorAll('li
+  a').forEach(function(a){r.push({name:a.textContent.trim(),url:a.getAttribute('href')});});}return JSON.stringify(r);})()"
     },
     "content": {
       "text": "//article[@class='page-content']//p",
