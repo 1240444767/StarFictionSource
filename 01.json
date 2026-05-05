@@ -74,11 +74,11 @@
       "method": "GET",
       "body": "",
       "list": "//ul[@class='u-list']/li",
-      "name": "h3[@class='bname']/a",
-      "author": "span[@class='bauthor']/a",
-      "cover": "div[@class='l-img']/a/img/@src",
-      "detailUrl": "h3[@class='bname']/a/@href",
-      "latestChapter": "p[@class='l-last']/a/span[@class='l-chapter']",
+      "name": ".//h3[@class='bname']/a",
+      "author": ".//span[@class='bauthor']/a",
+      "cover": ".//div[@class='l-img']/a/img/@src",
+      "detailUrl": ".//h3[@class='bname']/a/@href",
+      "latestChapter": ".//p[@class='l-last']/a/span[@class='l-chapter']",
       "jsExtract": ""
     },
     "detail": {
