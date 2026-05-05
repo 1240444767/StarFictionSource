@@ -1,4 +1,70 @@
-{
+[
+  {
+    "name": "笔书网",
+    "domain": "www.biqukun.org",
+    "charset": "utf-8",
+    "userAgent": "",
+    "search": {
+      "url": "http://www.biqukun.org/modules/article/search.php?searchkey={{key}}",
+      "method": "GET",
+      "body": "",
+      "list": "//table[@class='grid']//tr[td]",
+      "name": "td[1]/a",
+      "author": "td[3]",
+      "cover": "",
+      "detailUrl": "td[1]/a/@href",
+      "latestChapter": "td[2]//a"
+    },
+    "detail": {
+      "cover": "//div[@id='fmimg']/img/@src",
+      "name": "//meta[@property='og:novel:book_name']/@content",
+      "author": "//meta[@property='og:novel:author']/@content",
+      "summary": "//div[@id='intro']",
+      "chapterList": "//div[@id='list']//dd/a",
+      "chapterName": ".",
+      "chapterUrl": "./@href",
+      "chapterListNextPage": ""
+    },
+    "content": {
+      "text": "//div[@id='content']",
+      "nextPage": "",
+      "urlReplaceFrom": "",
+      "urlReplaceTo": "",
+      "filters": ["//script", "//center", "//div[@class='footer']"]
+    }
+  },
+  {
+    "name": "PO18 手机版",
+    "domain": "wap.po18.work",
+    "charset": "utf-8",
+    "userAgent": "",
+    "search": {
+      "url": "https://wap.po18.work/s.php",
+      "method": "POST",
+      "body": "searchkey={{key}}&page=1",
+      "list": "/html/body/div[2]/ul/li",
+      "name": "h2/a",
+      "author": "span[@class='author']",
+      "cover": "a[@class='top_img']/img/@src",
+      "detailUrl": "h2/a/@href",
+      "latestChapter": ""
+    },
+    "detail": {
+      "cover": "//div[@class='fm']/img/@src",
+      "name": "//h1",
+      "author": "//meta[@property='og:novel:author']/@content",
+      "summary": "//div[@class='intro']",
+      "chapterList": "//div[@class='chapters'][p[contains(text(),'全部章节')]]/ul/li[a]",
+      "chapterName": "./a",
+      "chapterUrl": "./a/@href",
+      "chapterListNextPage": "//div[@class='listpage']//a[contains(text(),'下一页')]/@href"
+    },
+    "content": {
+      "text": "//div[@id='content']",
+      "nextPage": "",
+      "filters": ["//script", "//div[@class='chapterpage']", "//div[@class='recommend']"]
+    }
+  },{
     "name": "爱下电子书",
     "domain": "ixdzs8.com",
     "charset": "utf-8",
@@ -51,3 +117,4 @@
       "jsExtract": ""
     }
   }
+]
