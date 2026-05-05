@@ -64,5 +64,41 @@
       "nextPage": "",
       "filters": ["//script", "//div[@class='chapterpage']", "//div[@class='recommend']"]
     }
+  },{
+    "name": "爱下电子书",
+    "domain": "ixdzs8.com",
+    "charset": "utf-8",
+    "useWebView": true,
+    "search": {
+      "url": "https://ixdzs8.com/bsearch?q={{key}}",
+      "method": "GET",
+      "body": "",
+      "list": "//li[h3/a[contains(@href,'/read/')]]",
+      "name": "h3/a",
+      "author": "a[contains(@href,'/author/')]",
+      "cover": "img/@src",
+      "detailUrl": "h3/a/@href",
+      "latestChapter": "",
+      "jsExtract": ""
+    },
+    "detail": {
+      "cover": "//img[contains(@src,'img')]/@src",
+      "name": "//h1",
+      "author": "//a[contains(@href,'/author/')]",
+      "summary": "",
+      "chapterList": "//a[contains(@href,'/p') and contains(@href,'.html')]",
+      "chapterName": ".",
+      "chapterUrl": "./@href",
+      "chapterListNextPage": "",
+      "jsExtract": ""
+    },
+    "content": {
+      "text": "//div[@id='content']",
+      "nextPage": "",
+      "urlReplaceFrom": "",
+      "urlReplaceTo": "",
+      "filters": ["//script", "//ins", "//div[contains(@class,'ad')]"],
+      "jsExtract": ""
+    }
   }
 ]
