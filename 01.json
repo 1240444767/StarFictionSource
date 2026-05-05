@@ -106,7 +106,7 @@
     "  }",
     "  return JSON.stringify(r);",
     "})()"
-  ],
+  ]},
     "content": {
       "text": "//article[@class='page-content']//p",
       "nextPage": "//a[contains(@class,'chapter-next')]/@href",
