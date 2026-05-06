@@ -153,12 +153,12 @@
       "url": "https://www.cuoceng.com/book/so.html?k={{key}}",
       "method": "GET",
       "body": "",
-      "list": "@css:div.library li, div.booklist li",
-      "name": "@css:h3 a, .bookname a",
-      "author": "@css:.author a, p.author",
-      "cover": "@css:img.thumbnail/@src, img/@src",
-      "detailUrl": "@css:h3 a/@href, .bookname a/@href",
-      "latestChapter": "@css:.latest a, .update a"
+      "list": "@css:tbody#bookList tr",
+      "name": "@css:td.name a",
+      "author": "@css:td.author a",
+      "cover": "",
+      "detailUrl": "@css:td.name a/@href",
+      "latestChapter": "@css:td.chapter a"
     },
     "detail": {
       "cover": "@css:img.thumbnail/@src",
@@ -168,16 +168,12 @@
       "chapterList": "@css:div.chapterlist dd a:not([href*='chapter/'])",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": "@css:dd a[href*='chapter/']/@href",
-      "jsExtract": ""
+      "chapterListNextPage": "@css:dd a[href*='chapter/']/@href"
     },
     "content": {
       "text": "@css:#content, div.readcontent",
       "nextPage": "",
-      "urlReplaceFrom": "",
-      "urlReplaceTo": "",
-      "filters": ["//script", "//ins"],
-      "jsExtract": ""
+      "filters": ["//script", "//ins"]
     }
   }
 ]
