@@ -199,8 +199,7 @@
       "chapterList": "@json:data.list",
       "chapterName": "@json:name",
       "chapterUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/content?password=huanmengapi&bid='+bid+'&cid='+id",
-      "chapterListNextPage": "@js:(function(){var t=document.querySelector('pre');if(!t)return'';var j=JSON.parse(t.textContent);if(j.data&&j.data.list)return'';if(j.data&&j.data.id)r
-  eturn'https://www.huanmengacg.com/index.php/bookapi/chapters?password=huanmengapi&id='+j.data.id+'&size=5000';return''})()"
+      "chapterListNextPage": "@json:'https://www.huanmengacg.com/index.php/bookapi/chapters?password=huanmengapi&id='+data.id+'&size=5000'"
     },
     "content": {
       "text": "@json:data.content",
