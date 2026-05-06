@@ -145,35 +145,39 @@
       "filters": ["//script", "//ins"]
     }
   },{
-    "name": "掌阅中文",
-    "domain": "m.newqy.com",
+    "name": "错层小说",
+    "domain": "www.cuoceng.com",
     "charset": "utf-8",
     "useWebView": true,
     "search": {
-      "url": "https://m.newqy.com/user/search.html?q={{key}}",
+      "url": "https://www.cuoceng.com/book/so.html?k={{key}}",
       "method": "GET",
       "body": "",
-      "list": "@js:(function(){var r=[];var imgs=document.querySelectorAll('#main .image img');var titles=document.querySelectorAll('#main .info
-  .title');imgs.forEach(function(img,i){var a=img.closest('a');var cover=img.getAttribute('src');var name=titles[i]?titles[i].textContent.trim():'';var
-  info=document.querySelectorAll('#main .info');var author='';if(info[i]){var ps=info[i].querySelectorAll('p');ps.forEach(function(p){if(p.textContent.indexOf('作者')>=0)author=p.
-  textContent.replace('作者：','').trim()})}r.push({name:name,author:author,cover:cover,detailUrl:a?a.getAttribute('href'):''})});return JSON.stringify(r)})()"
+      "list": "@css:div.library li, div.booklist li",
+      "name": "@css:h3 a, .bookname a",
+      "author": "@css:.author a, p.author",
+      "cover": "@css:img.thumbnail/@src, img/@src",
+      "detailUrl": "@css:h3 a/@href, .bookname a/@href",
+      "latestChapter": "@css:.latest a, .update a"
     },
     "detail": {
-      "cover": "//meta[@property='og:image']/@content",
-      "name": "//h2[@class='title']",
-      "author": "//meta[@property='og:novel:author']/@content",
-      "summary": "//div[@class='introbar']",
-      "chapterList": "//ul[@class='chapter']/li/a",
+      "cover": "@css:img.thumbnail/@src",
+      "name": "@css:h1.booktitle",
+      "author": "@css:a.red",
+      "summary": "//meta[@name='description']/@content",
+      "chapterList": "@css:div.chapterlist dd a:not([href*='chapter/'])",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": ""
+      "chapterListNextPage": "@css:dd a[href*='chapter/']/@href",
+      "jsExtract": ""
     },
     "content": {
-      "text": "//div[@id='text']",
+      "text": "@css:#content, div.readcontent",
       "nextPage": "",
       "urlReplaceFrom": "",
       "urlReplaceTo": "",
-      "filters": ["//script"]
+      "filters": ["//script", "//ins"],
+      "jsExtract": ""
     }
   }
 ]
