@@ -153,11 +153,10 @@
       "url": "https://m.newqy.com/user/search.html?q={{key}}",
       "method": "GET",
       "body": "",
-      "list": "@js:var r=[];document.querySelectorAll('#main .search article, #main .search .image').forEach(function(el){var img=el.querySelector('img');var
-  title=el.querySelector('.title');var info=el.closest('.search')||el.parentElement;var ps=info.querySelectorAll('p');var
-  author='';ps.forEach(function(p){if(p.textContent.indexOf('作者')>=0)author=p.textContent.replace('作者：','').trim();});var
-  a=el.querySelector('a[href]');r.push({name:title?title.textContent.trim():'',author:author,cover:img?img.getAttribute('src'):'',detailUrl:a?a.getAttribute('href'):''});});return
-   JSON.stringify(r);"
+      "list": "@js:(function(){var r=[];var imgs=document.querySelectorAll('#main .image img');var titles=document.querySelectorAll('#main .info
+  .title');imgs.forEach(function(img,i){var a=img.closest('a');var cover=img.getAttribute('src');var name=titles[i]?titles[i].textContent.trim():'';var
+  info=document.querySelectorAll('#main .info');var author='';if(info[i]){var ps=info[i].querySelectorAll('p');ps.forEach(function(p){if(p.textContent.indexOf('作者')>=0)author=p.
+  textContent.replace('作者：','').trim()})}r.push({name:name,author:author,cover:cover,detailUrl:a?a.getAttribute('href'):''})});return JSON.stringify(r)})()"
     },
     "detail": {
       "cover": "//meta[@property='og:image']/@content",
