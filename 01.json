@@ -144,5 +144,40 @@
       "nextPage": "//a[@id='next_url']/@href",
       "filters": ["//script", "//ins"]
     }
+  },{
+    "name": "掌阅中文",
+    "domain": "m.newqy.com",
+    "charset": "utf-8",
+    "useWebView": true,
+    "search": {
+      "url": "https://m.newqy.com/user/search.html?q={{key}}",
+      "method": "GET",
+      "body": "",
+      "list": "@js:var r=[];document.querySelectorAll('.search .info').forEach(function(d){var a=d.querySelector('a');var t=d.querySelector('.title');var p=d.querySelectorAll('p')
+  ;r.push({name:t?t.textContent.trim():'',author:p.length>0?p[0].textContent.replace('作者：','').trim():'',cover:'',detailUrl:a?a.getAttribute('href'):''});});return
+  JSON.stringify(r);",
+      "name": "@js:'return document.querySelector(\"meta[property='og:title']\").getAttribute('content')",
+      "author": "@js:'return document.querySelector(\"meta[property='og:novel:author']\").getAttribute('content')",
+      "cover": "@js:'return document.querySelector(\"meta[property='og:image']\").getAttribute('content')",
+      "detailUrl": "@js:'return document.querySelector(\"meta[property='og:url']\").getAttribute('content')",
+      "latestChapter": "@js:'var e=document.querySelector(\"meta[property='og:novel:last_chapter_name']\");return e?e.getAttribute('content'):''"
+    },
+    "detail": {
+      "cover": "//meta[@property='og:image']/@content",
+      "name": "//h2[@class='title']",
+      "author": "//meta[@property='og:novel:author']/@content",
+      "summary": "//div[@class='introbar']",
+      "chapterList": "//ul[@class='chapter']/li/a",
+      "chapterName": ".",
+      "chapterUrl": "./@href",
+      "chapterListNextPage": ""
+    },
+    "content": {
+      "text": "//div[@id='text']",
+      "nextPage": "",
+      "urlReplaceFrom": "",
+      "urlReplaceTo": "",
+      "filters": ["//script"]
+    }
   }
 ]
