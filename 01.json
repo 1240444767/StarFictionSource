@@ -116,20 +116,19 @@
       "jsExtract": ""
     }
   },{
-    "name": "微山书院",
+    "name": "勇士小说",
     "domain": "www.337939.com",
     "charset": "utf-8",
-    "useWebView": false,
+    "sslVerify": false,
     "search": {
       "url": "https://www.337939.com/search/",
       "method": "POST",
       "body": "searchkey={{key}}&searchtype=all",
-      "list": "//div[@class='flex flex-wrap category-commend']/div",
+      "list": "//div[contains(@class,'category-commend')]/div",
       "name": ".//a/h3",
       "author": ".//span",
       "cover": ".//img/@data-original",
-      "detailUrl": ".//a[contains(@href,'/book/')]/@href",
-      "latestChapter": ""
+      "detailUrl": ".//a[contains(@href,'/book/')]/@href"
     },
     "detail": {
       "cover": "//div[@class='info-main']//img/@data-original",
@@ -138,15 +137,12 @@
       "summary": "//div[@class='info-main-intro']/p[1]",
       "chapterList": "//div[@class='info-chapters flex flex-wrap']/a",
       "chapterName": ".",
-      "chapterUrl": "./@href",
-      "chapterListNextPage": ""
+      "chapterUrl": "./@href"
     },
     "content": {
       "text": "//article[@id='article']",
       "nextPage": "//a[@id='next_url']/@href",
-      "urlReplaceFrom": "",
-      "urlReplaceTo": "",
-      "filters": ["//script", "//ins", "//div[contains(@class,'ad')]"]
+      "filters": ["//script", "//ins"]
     }
   }
 ]
