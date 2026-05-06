@@ -153,14 +153,11 @@
       "url": "https://m.newqy.com/user/search.html?q={{key}}",
       "method": "GET",
       "body": "",
-      "list": "@js:var r=[];document.querySelectorAll('.search .info').forEach(function(d){var a=d.querySelector('a');var t=d.querySelector('.title');var p=d.querySelectorAll('p')
-  ;r.push({name:t?t.textContent.trim():'',author:p.length>0?p[0].textContent.replace('作者：','').trim():'',cover:'',detailUrl:a?a.getAttribute('href'):''});});return
-  JSON.stringify(r);",
-      "name": "@js:'return document.querySelector(\"meta[property='og:title']\").getAttribute('content')",
-      "author": "@js:'return document.querySelector(\"meta[property='og:novel:author']\").getAttribute('content')",
-      "cover": "@js:'return document.querySelector(\"meta[property='og:image']\").getAttribute('content')",
-      "detailUrl": "@js:'return document.querySelector(\"meta[property='og:url']\").getAttribute('content')",
-      "latestChapter": "@js:'var e=document.querySelector(\"meta[property='og:novel:last_chapter_name']\");return e?e.getAttribute('content'):''"
+      "list": "@js:var r=[];document.querySelectorAll('#main .search article, #main .search .image').forEach(function(el){var img=el.querySelector('img');var
+  title=el.querySelector('.title');var info=el.closest('.search')||el.parentElement;var ps=info.querySelectorAll('p');var
+  author='';ps.forEach(function(p){if(p.textContent.indexOf('作者')>=0)author=p.textContent.replace('作者：','').trim();});var
+  a=el.querySelector('a[href]');r.push({name:title?title.textContent.trim():'',author:author,cover:img?img.getAttribute('src'):'',detailUrl:a?a.getAttribute('href'):''});});return
+   JSON.stringify(r);"
     },
     "detail": {
       "cover": "//meta[@property='og:image']/@content",
