@@ -135,7 +135,7 @@
       "name": "//h1",
       "author": "//div[@class='info-main']//a[contains(@href,'/author/')]",
       "summary": "//div[@class='info-main-intro']/p[1]",
-      "chapterList": "//div[@class='info-chapters flex flex-wrap']/a",
+      "chapterList": "//*[@id='list-chapterAll']/dd[1]",
       "chapterName": ".",
       "chapterUrl": "./@href"
     },
