@@ -176,5 +176,35 @@
       "nextPage": "@css:.nextPageBox a.next/@href",
       "filters": ["//script", "//ins"]
     }
+  },{
+    "name": "幻梦轻小说",
+    "domain": "www.huanmengacg.com",
+    "charset": "utf-8",
+    "useWebView": false,
+    "search": {
+      "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengapi&key={{key}}&page=1&size=20",
+      "method": "GET",
+      "body": "",
+      "list": "@json:data.list",
+      "name": "@json:name",
+      "author": "@json:author",
+      "cover": "@json:pic",
+      "detailUrl": "@json:'/index.php/book/info?id='+id",
+      "latestChapter": "@json:text_num"
+    },
+    "detail": {
+      "cover": "",
+      "name": "",
+      "author": "",
+      "summary": "",
+      "chapterList": "",
+      "chapterName": "",
+      "chapterUrl": ""
+    },
+    "content": {
+      "text": "",
+      "nextPage": "",
+      "filters": ["//script", "//ins"]
+    }
   }
 ]
