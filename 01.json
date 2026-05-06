@@ -165,7 +165,7 @@
       "name": "@css:.book_info h1",
       "author": "@css:.book_info a.author",
       "summary": "@css:.intro_txt p:first-child",
-      "chapterList": "@css:.bookChapter ul.list li a",
+      "chapterList": "@css:.bookChapter ul li a, .dirWrap ul li a",
       "chapterName": ".",
       "chapterUrl": "./@href",
       "chapterListNextPage": "@css:.book_tit a.fr/@href"
