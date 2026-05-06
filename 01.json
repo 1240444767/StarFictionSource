@@ -182,13 +182,13 @@
     "charset": "utf-8",
     "useWebView": true,
     "search": {
-      "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengapi&key={{key}}&page=1&size=20",
+      "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengbookapi&key={{key}}&page=1&size=20",
       "method": "GET",
       "list": "@json:data.list",
       "name": "@json:name",
       "author": "@json:author",
       "cover": "@json:pic",
-      "detailUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/detail?password=huanmengapi&id='+id",
+      "detailUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/detail?password=huanmengbookapi&id='+id",
       "latestChapter": "@json:text_num"
     },
     "detail": {
@@ -198,8 +198,8 @@
       "summary": "@json:data.intro",
       "chapterList": "@json:data.list",
       "chapterName": "@json:name",
-      "chapterUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/content?password=huanmengapi&bid='+bid+'&cid='+id",
-      "chapterListNextPage": "@json:'https://www.huanmengacg.com/index.php/bookapi/chapters?password=huanmengapi&id='+data.id+'&size=5000'"
+      "chapterUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/content?password=huanmengbookapi&bid='+bid+'&cid='+id",
+      "chapterListNextPage": "@json:'https://www.huanmengacg.com/index.php/bookapi/chapters?password=huanmengbookapi&id='+data.id+'&size=5000'"
     },
     "content": {
       "text": "@json:data.content",
