@@ -161,19 +161,22 @@
       "latestChapter": "@css:td.chapter a"
     },
     "detail": {
-      "cover": "@css:img.thumbnail/@src",
-      "name": "@css:h1.booktitle",
-      "author": "@css:a.red",
-      "summary": "//meta[@name='description']/@content",
-      "chapterList": "@css:div.chapterlist dd a:not([href*='chapter/'])",
+      "cover": "@css:.book_cover img/@data-src",
+      "name": "@css:.book_info h1",
+      "author": "@css:.book_info a.author",
+      "summary": "@css:.intro_txt p:first-child",
+      "chapterList": "@css:.bookChapter ul.list li a",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": "@css:dd a[href*='chapter/']/@href"
+      "chapterListNextPage": "@css:.book_tit a.fr/@href"
     },
     "content": {
-      "text": "@css:#content, div.readcontent",
+      "text": "@css:.readcontent, #content",
       "nextPage": "",
-      "filters": ["//script", "//ins"]
+      "urlReplaceFrom": "",
+      "urlReplaceTo": "",
+      "filters": ["//script", "//ins"],
+      "jsExtract": ""
     }
   }
 ]
