@@ -171,12 +171,9 @@
       "chapterListNextPage": "@css:.book_tit a.fr/@href"
     },
     "content": {
-      "text": "@css:.readcontent, #content",
-      "nextPage": "",
-      "urlReplaceFrom": "",
-      "urlReplaceTo": "",
-      "filters": ["//script", "//ins"],
-      "jsExtract": ""
+      "text": "@css:#showReading",
+      "nextPage": "@css:.nextPageBox a.next/@href",
+      "filters": ["//script", "//ins"]
     }
   }
 ]
