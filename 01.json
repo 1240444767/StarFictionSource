@@ -171,7 +171,7 @@
       "chapterListNextPage": "@css:.book_tit a.fr/@href"
     },
     "content": {
-      "text": "@css:#showReading",
+      "text": "@css:#showReading p",
       "nextPage": "@css:.nextPageBox a.next/@href",
       "filters": ["//script", "//ins"]
     }
