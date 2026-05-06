@@ -168,8 +168,9 @@
       "chapterList": "@css:.dirWrap ul li a",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": "@js:var p=parseInt(document.querySelector('#pageNo').value)||1;var n=p+1;var bk=document.querySelector('#bkId').value;return
-  n<=parseInt(document.querySelector('#pageNum').value)?'/book/chapter/'+bk+'/'+n+'.html':''"
+      "chapterListNextPage": "@js:(function(){var bk=document.querySelector('#bkId');var pn=document.querySelector('#pageNo');var
+  num=document.querySelector('#pageNum');if(bk&&pn&&num){var p=parseInt(pn.value)||1;if(p<parseInt(num.value))return'/book/chapter/'+bk.value+'/'+(p+1)+'.html';return'';}var
+  a=document.querySelector('.book_tit a.fr');return a?a.getAttribute('href'):''})()"
     },
     "content": {
       "text": "@css:#showReading p",
