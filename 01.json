@@ -168,7 +168,8 @@
       "chapterList": "@css:.dirWrap ul li a",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": "@css:.book_tit a.fr/@href"
+      "chapterListNextPage": "@js:var p=parseInt(document.querySelector('#pageNo').value)||1;var n=p+1;var bk=document.querySelector('#bkId').value;return
+  n<=parseInt(document.querySelector('#pageNum').value)?'/book/chapter/'+bk+'/'+n+'.html':''"
     },
     "content": {
       "text": "@css:#showReading p",
