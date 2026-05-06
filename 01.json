@@ -180,31 +180,31 @@
     "name": "幻梦轻小说",
     "domain": "www.huanmengacg.com",
     "charset": "utf-8",
-    "useWebView": false,
+    "useWebView": true,
     "search": {
       "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengapi&key={{key}}&page=1&size=20",
       "method": "GET",
-      "body": "",
       "list": "@json:data.list",
       "name": "@json:name",
       "author": "@json:author",
       "cover": "@json:pic",
-      "detailUrl": "@json:'/index.php/book/info?id='+id",
+      "detailUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/detail?password=huanmengapi&id='+id",
       "latestChapter": "@json:text_num"
     },
     "detail": {
-      "cover": "",
-      "name": "",
-      "author": "",
-      "summary": "",
-      "chapterList": "",
-      "chapterName": "",
-      "chapterUrl": ""
+      "cover": "@json:data.pic",
+      "name": "@json:data.name",
+      "author": "@json:data.author",
+      "summary": "@json:data.intro",
+      "chapterList": "@json:data.list",
+      "chapterName": "@json:name",
+      "chapterUrl": "@json:'https://www.huanmengacg.com/index.php/bookapi/content?password=huanmengapi&bid='+bid+'&cid='+id",
+      "chapterListNextPage": ""
     },
     "content": {
-      "text": "",
+      "text": "@json:data.content",
       "nextPage": "",
-      "filters": ["//script", "//ins"]
+      "filters": []
     }
   }
 ]
