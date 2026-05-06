@@ -41,7 +41,7 @@
     "search": {
       "url": "https://wap.po18.work/s.php",
       "method": "POST",
-      "body": "searchkey={{key}}&page=1",
+      "body": "searchkey={{key}}&page={{page}}",
       "list": "/html/body/div[2]/ul/li",
       "name": "h2/a",
       "author": "span[@class='author']",
@@ -182,7 +182,7 @@
     "charset": "utf-8",
     "useWebView": true,
     "search": {
-      "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengbookapi&key={{key}}&page=1&size=20",
+      "url": "https://www.huanmengacg.com/index.php/bookapi/search?password=huanmengbookapi&key={{key}}&page={{page}}&size=20",
       "method": "GET",
       "list": "@json:data.list",
       "name": "@json:name",
