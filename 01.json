@@ -168,9 +168,10 @@
       "chapterList": "@css:.dirWrap ul li a",
       "chapterName": ".",
       "chapterUrl": "./@href",
-      "chapterListNextPage": "@js:(function(){var bk=document.querySelector('#bkId');var pn=document.querySelector('#pageNo');if(bk&&pn){var p=parseInt(pn.value)||1;var
-  c=parseInt(document.querySelector('#pageNum').value)||0;var s=parseInt(document.querySelector('#pageSize').value)||50;var n=p+1;var t=Math.ceil(c/s);if(n<=t)return
-  n===1?'/book/chapter/'+bk.value+'.html':'/book/chapter/'+bk.value+'/'+n+'.html';return'';}var a=document.querySelector('.book_tit a.fr');return a?a.getAttribute('href'):''})()"
+      "chapterListNextPage": "@js:(function(){var bk=document.querySelector('#bkId');var num=document.querySelector('#pageNum');var
+  size=document.querySelector('#pageSize');if(bk&&num){var m=location.pathname.match(/\\/book\\/chapter\\/[^\\/]+\\/(\\d+)\\.html/);var p=m?parseInt(m[1]):1;var
+  c=parseInt(num.value)||0;var s=parseInt(size.value)||1000;var n=p+1;if(n<=Math.ceil(c/s))return'/book/chapter/'+bk.value+'/'+n+'.html';return'';}var
+  a=document.querySelector('.book_tit a.fr');return a?a.getAttribute('href'):''})()"
     },
     "content": {
       "text": "@css:#showReading p",
