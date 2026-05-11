@@ -29,7 +29,13 @@
 ## 书源地址：
 大家可以定期导入一次书源，导入时 APP 会自动去重复的。
 - **本地导入地址：** 去上面的书源分享地址里点击 **\[下载文件\]**  
-- **网络导入地址：** 以下 CDN 分流地址，任选一个能用的  
-_https://ghfast.top/https://github.com/1240444767/StarFictionSource/commits/main/01.json_  
+- **网络导入地址：** 以下 CDN 分流地址，任选一个能用的
+  
+_https://ghfast.top/https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json_  
 
+_https://wget.la/https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json_  
+
+_https://gh.catmak.name/https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json_ 
+
+_https://cdn.gh-proxy.org/https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json_  
 ****
