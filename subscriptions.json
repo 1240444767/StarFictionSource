@@ -1,10 +1,14 @@
 [
   {
     "name": "Star源(请勿随意传播,后果自负)",
-    "url": "https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json"
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/a8adf570-e115-4b99-87e3-ccaf298ae361"
   },
   {
-    "name": "Star源(镜像,另一个获取不了使用这个)",
-    "url": "https://ghfast.top/https://raw.githubusercontent.com/1240444767/StarFictionSource/refs/heads/main/01.json"
+    "name": "皇叔书源(请勿随意传播,后果自负)",
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/06626937-970d-4936-8fd1-8f4ecbbd64f9"
+  },
+  {
+    "name": "25 个优质书源(请勿随意传播,后果自负)",
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/e56632ca-d5de-4e2c-9ab1-6792a7164312"
   }
 ]
