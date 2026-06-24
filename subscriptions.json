@@ -10,5 +10,41 @@
   {
     "name": "25 个优质书源(请勿随意传播,后果自负)",
     "url": "https://shuyuan-api.yiove.com/import/book-source-collection/e56632ca-d5de-4e2c-9ab1-6792a7164312"
+  },
+  {
+    "name": "1990个书源(请勿随意传播,后果自负)",
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/e61838fa-9a13-4137-b68a-192313eade0c"
+  },
+  {
+    "name": "明月照大江书源(请勿随意传播,后果自负)",
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/3d9f811b-0831-4203-9fcb-3e8020f8aa2d"
+  },
+  {
+    "name": "一程书源(请勿随意传播,后果自负)",
+    "url": "https://shuyuan-api.yiove.com/import/book-source-collection/e8132620-48e5-425b-811a-bca11ceffd4a"
+  },
+  {
+    "name": "shidahuilang书源(请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/e29e19ee.json"
+  },
+  {
+    "name": "全量书源(请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/b778fe6b.json"
+  },
+  {
+    "name": "XIU2精品书源(请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/71e56d4f.json"
+  },
+  {
+    "name": "破冰书源 (请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/4dc410d1.json"
+  },
+  {
+    "name": "关耳女频书源 (请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/e3e5d620.json"
+  },
+  {
+    "name": "三舞313书源 (请勿随意传播,后果自负)",
+    "url": "https://legado.aoaostar.com/sources/2a1f129b.json"
   }
 ]
